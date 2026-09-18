@@ -5,7 +5,7 @@
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 git clone -b files https://github.com/jimgo188/op-package files
 
-sed -i 's/+bind-dig//' feeds/helloworld/luci-app-ssr-plus/Makefile
+
 # mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
