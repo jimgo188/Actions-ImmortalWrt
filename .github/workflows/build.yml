@@ -59,12 +59,7 @@ jobs:
 
       - name: 更新并下载 feeds (Update and download feeds)
         working-directory: ImmortalWrt
-        run: |
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
-          # 修复 luci-app-ssr-plus 依赖 bind-dig 的问题
-          sed -i 's/+bind-dig//' feeds/helloworld/luci-app-ssr-plus/Makefile || true
-          find feeds -name "Makefile" -path "*/luci-app-ssr-plus/*" -exec sed -i 's/+bind-dig//' {} \; || true
+        run: ./scripts/feeds update -a && ./scripts/feeds install -a
 
       - name: 运行 diy1.sh (Run diy.sh)
         working-directory: ImmortalWrt
