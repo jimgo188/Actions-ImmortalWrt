@@ -61,7 +61,7 @@ jobs:
         working-directory: ImmortalWrt
         run: ./scripts/feeds update -a && ./scripts/feeds install -a
 
-      - name: 运行 diy1.sh (Run diy.sh)
+      - name: 运行 diy1.sh (Run diy1.sh)
         working-directory: ImmortalWrt
         run: |
           chmod +x diy1.sh
